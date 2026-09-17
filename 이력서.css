@@ -1,0 +1,143 @@
+.wrapper{
+  width: 100%;
+  height: 50vw;
+
+  border: 2px solid lightgray;
+  background-color: whitesmoke;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  place-content: strech;
+
+}
+
+header{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  place-items: center;
+}
+
+main{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  place-items: center;
+}
+
+
+
+footer{
+  border: 3px solid gray;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+footer > .hobby,
+footer > .language,
+footer > .project {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100%;
+}
+
+.section-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  padding-top: 20px;
+}
+
+.hobby-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.hobby-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+}
+
+.hobby-workout,
+.hobby-swim,
+.hobby-music,
+.hobby-video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 120px;
+  height: 65px;
+  justify-content: center;
+
+  & .emoji {
+    font-size: 40px;
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  & label {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+.hobby-workout .emoji { transform: scale(0.9); }
+.hobby-swim .emoji    { transform: scale(0.9); }
+.hobby-music .emoji   { transform: scale(2.5); }
+.hobby-video .emoji   { transform: scale(0.9); }
+
+
+.language-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+.language-korean,
+.language-english,
+.language-chinese,
+.language-japanese {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  & label {
+    width: 60px;
+    font-size: 20px;
+    font-weight: 500;
+    flex-shrink: 0;
+    text-align: center;
+  }
+
+  & .language-bar {
+    width: 50%;
+    height: 20px;
+    background-color: #3a4a5c;
+    border-radius: 8px;
+    overflow: hidden;
+
+    & .bar-fill {
+      height: 100%;
+      background-color: #4fd1c5;
+      border-radius: 5px;
+    }
+  }
+
+  & .percent {
+    font-size: 16px;
+    white-space: nowrap;
+  }
+}
